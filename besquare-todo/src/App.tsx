@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="form">
       <h1>To-Do App</h1>
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} toggleComplete={toggleComplete} />
