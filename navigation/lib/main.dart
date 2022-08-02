@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/shades_with_params.dart';
+import 'package:navigation/colour_slider.dart';
 import 'home_page.dart';
 
 void main() {
@@ -13,7 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(),
-      home: HomePage()
+      home: HomePage(),
+      routes: {
+        '/index': (context) => HomePage(),
+        '/shades':(context) => ShadesWithParams(), // create a key value and parse to other file
+        '/slider':(context) => RGBSliderPage(),
+      },
     );
   }
 }
